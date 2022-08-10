@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+        <script src="./script.js" defer></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./img/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./img/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+		<title>Music Player</title>
+	</head>
+	<body>
+		<div class="app">
+			<!-- date and time -->
+			<div class="info">
+                <h2 class="data">
+                    <span class="date-day">Mon</span>
+                    <span class="date-num">6</span>
+                </h2>
+                <h1 class="time">
+                    <span class="time-hour">09</span> :
+                    <span class="time-minute">45</span>
+                </h1>
+            </div>
+            <!-- Music -->
+			<div class="music">
+				<div class="image-container">
+					<img class="img" src="" alt="Album cover" />
+				</div>
+				<div class="player-container">
+                    <h3 class="music-name center"></span>
+                    <h4 class="music-artist center"></h4>
+					<audio src="" type="audio/mpeg"></audio>
+                    <div class="duration-container">
+                        <span class="curr-time">00:00</span>
+                        <div class="progress-container">
+                            <div class="progress"></div>
+                        </div>
+                        <span class="duration">02:06</span>
+                    </div>
+					<div class="control-container center">
+						<i class="fa-solid fa-backward-fast backward">&nbsp;</i>
+						<i class="fa-solid fa-play play">&nbsp;</i>
+						<!-- <i class="fa-solid fa-pause"></i> -->
+						<i class="fa-solid fa-forward-fast forward">&nbsp;</i>
+					</div>
+                    
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

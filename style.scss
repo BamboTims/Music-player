@@ -1,0 +1,201 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,600;1,700&family=Lobster&display=swap");
+
+/* font-family: 'EB Garamond', serif;
+font-family: 'Lobster', cursive; */
+
+// Mixinxs
+@mixin respond($breakpoint) {
+	@if ($breakpoint == "phone") {
+		@media only screen and (max-width: 725px) {
+			@content;
+		}
+	} @else if($breakpoint == "tabs") {
+		@media only screen and (min-width: 726px) {
+			@content;
+		}
+	}
+}
+
+// Base stylings
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	font-family: "EB Garamond", serif;
+	background-color: #b56576;
+}
+
+.app {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+}
+
+.info {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	& h1,
+	& h2 {
+		display: block;
+		font-weight: 600;
+	}
+
+	& h1 {
+		font-size: 6rem;
+		letter-spacing: 2px;
+		border-bottom: 4px dotted #000;
+		padding: 3rem;
+		font-weight: 700;
+	}
+
+	& h2 {
+		font-size: 3rem;
+		letter-spacing: 2px;
+	}
+}
+
+.music {
+	background-color: #d8e2dc;
+	display: flex;
+	flex: 1;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-left: 3px solid #000;
+	color: #fff;
+
+	&-name {
+		font-size: 2rem;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+
+	&-artist {
+		font-size: 1.6rem;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+}
+
+.image-container {
+	width: 45rem;
+	height: 45rem;
+	margin-bottom: 3rem;
+
+	& img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+}
+
+.player-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background-color: #495057;
+	width: 70%;
+	height: 10rem;
+	border-radius: 10px;
+	padding: 1rem 1rem;
+}
+
+.duration-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	span {
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+	}
+}
+
+.progress {
+	width: 30%;
+	height: 5px;
+	background-color: #000;
+	border-radius: 5px;
+
+	&-container {
+		display: block;
+		width: 85%;
+		height: 5px;
+		margin: 1rem auto;
+		background-color: #ced4da;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+}
+
+.control-container {
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+i {
+	font-size: 2rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in;
+}
+
+// Utility
+.center {
+	text-align: center;
+}
+
+// media-queries
+@include respond(phone) {
+	html {
+		font-size: 45%;
+	}
+
+	.app {
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	.info {
+		height: 30%;
+		width: 100%;
+
+		& h1 {
+			border-bottom: none;
+		}
+	}
+	.music {
+		height: 70%;
+		width: 100%;
+		justify-content: space-evenly;
+		background-color: transparent;
+		border-left: 0;
+	}
+
+	.control-container {
+		width: 80%;
+	}
+}

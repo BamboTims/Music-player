@@ -1,0 +1,233 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,600;1,700&family=Lobster&display=swap");
+/* font-family: 'EB Garamond', serif;
+font-family: 'Lobster', cursive; */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "EB Garamond", serif;
+  background-color: #b56576;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.info {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info h1,
+.info h2 {
+  display: block;
+  font-weight: 600;
+}
+
+.info h1 {
+  font-size: 6rem;
+  letter-spacing: 2px;
+  border-bottom: 4px dotted #000;
+  padding: 3rem;
+  font-weight: 700;
+}
+
+.info h2 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.music {
+  background-color: #d8e2dc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-left: 3px solid #000;
+  color: #fff;
+}
+
+.music-name {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.music-artist {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.image-container {
+  width: 45rem;
+  height: 45rem;
+  margin-bottom: 3rem;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.player-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #495057;
+  width: 70%;
+  height: 10rem;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+}
+
+.duration-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.duration-container span {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.progress {
+  width: 30%;
+  height: 5px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.progress-container {
+  display: block;
+  width: 85%;
+  height: 5px;
+  margin: 1rem auto;
+  background-color: #ced4da;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.control-container {
+  width: 60%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+i {
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.center {
+  text-align: center;
+}
+
+@media only screen and (max-width: 725px) {
+  html {
+    font-size: 45%;
+  }
+  .app {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .info {
+    height: 30%;
+    width: 100%;
+  }
+  .info h1 {
+    border-bottom: none;
+  }
+  .music {
+    height: 70%;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: transparent;
+    border-left: 0;
+  }
+  .control-container {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
